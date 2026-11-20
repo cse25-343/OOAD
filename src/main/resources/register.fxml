@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="780.0" prefHeight="640.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f4f8fc, #cfe3f3);"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="boundary.RegisterView">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #14407d;">
+            <padding>
+                <Insets top="14" right="20" bottom="14" left="20"/>
+            </padding>
+            <Label text="Seabank" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Back to Login" onAction="#onBackClicked"
+                    style="-fx-background-color: #2a62b5; -fx-text-fill: white; -fx-background-radius: 5;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="12.0">
+            <padding>
+                <Insets top="20" right="35" bottom="20" left="35"/>
+            </padding>
+
+            <Label text="Register Your Account" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #14407d;"/>
+            <Label text="Fill in the details below to open your account." style="-fx-font-size: 15px;"/>
+
+            <GridPane hgap="25.0" vgap="12.0">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"/>
+                    <ColumnConstraints percentWidth="50"/>
+                </columnConstraints>
+
+                <!-- Left column -->
+                <TextField fx:id="fullNameField" promptText="Full Name" prefHeight="40.0"
+                           GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="nationalIdField" promptText="National ID Number" prefHeight="40.0"
+                           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="phoneField" promptText="Phone Number" prefHeight="40.0"
+                           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="emailField" promptText="Email Address" prefHeight="40.0"
+                           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+                <!-- Right column -->
+                <ComboBox fx:id="accountTypeBox" promptText="Account Type" maxWidth="Infinity" prefHeight="40.0"
+                          GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <PasswordField fx:id="passwordField" promptText="Password" prefHeight="40.0"
+                               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password" prefHeight="40.0"
+                               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            </GridPane>
+
+            <!-- Proof of employment -->
+            <HBox alignment="CENTER_LEFT" spacing="15.0" maxWidth="460.0"
+                  style="-fx-background-color: #e3eefb; -fx-border-color: #9ec1ee; -fx-border-radius: 8; -fx-background-radius: 8;">
+                <padding>
+                    <Insets top="10" right="15" bottom="10" left="15"/>
+                </padding>
+                <VBox spacing="2.0" HBox.hgrow="ALWAYS">
+                    <Label text="Proof of Employment" style="-fx-font-weight: bold; -fx-text-fill: #14407d;"/>
+                    <Label text="(Employment Letter or Payslip)" style="-fx-font-size: 11px;"/>
+                </VBox>
+                <VBox alignment="CENTER" spacing="3.0">
+                    <Button fx:id="chooseFileButton" text="Choose File..." onAction="#onChooseFileClicked"
+                            style="-fx-background-color: #0b5cc7; -fx-text-fill: white; -fx-background-radius: 6;"/>
+                    <Label fx:id="fileLabel" text="No file selected" style="-fx-font-size: 11px;"/>
+                </VBox>
+            </HBox>
+
+            <Label fx:id="messageLabel" maxWidth="600.0" wrapText="true" alignment="CENTER"
+                   style="-fx-text-fill: #c0392b;"/>
+
+            <Button fx:id="registerButton" text="Register Account" defaultButton="true"
+                    onAction="#onRegisterClicked" prefWidth="260.0" prefHeight="42.0"
+                    style="-fx-background-color: #14407d; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8;"/>
+        </VBox>
+    </center>
+</BorderPane>
