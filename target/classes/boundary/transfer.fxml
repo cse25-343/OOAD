@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="720.0" prefHeight="560.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f4f8fc, #cfe3f3);"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="boundary.TransferView">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #14407d;">
+            <padding>
+                <Insets top="12" right="20" bottom="12" left="20"/>
+            </padding>
+            <Label text="Seabank" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="backButton" text="Back to Dashboard" onAction="#onBackClicked"
+                    style="-fx-background-color: #2a62b5; -fx-text-fill: white; -fx-background-radius: 5;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="12.0">
+            <padding>
+                <Insets top="25" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <fx:define>
+                <ToggleGroup fx:id="modeGroup"/>
+            </fx:define>
+
+            <Label text="Transfer Money" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #14407d;"/>
+            <Label text="Choose where the money is going." style="-fx-font-size: 14px;"/>
+
+            <VBox spacing="6.0" maxWidth="380.0">
+                <Label text="From Account:" style="-fx-font-weight: bold;"/>
+                <ComboBox fx:id="fromBox" promptText="Choose account" maxWidth="Infinity"/>
+                <Label text="Available Balance:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="balanceLabel" text="P 0.00" style="-fx-font-size: 18px;"/>
+
+                <HBox spacing="20.0">
+                    <padding>
+                        <Insets top="8" right="0" bottom="0" left="0"/>
+                    </padding>
+                    <RadioButton fx:id="ownRadio" text="My own account" toggleGroup="$modeGroup" selected="true"/>
+                    <RadioButton fx:id="otherRadio" text="Another person" toggleGroup="$modeGroup"/>
+                </HBox>
+
+                <VBox fx:id="ownBox" spacing="6.0">
+                    <Label text="To Account:" style="-fx-font-weight: bold;"/>
+                    <ComboBox fx:id="toOwnBox" promptText="Choose account" maxWidth="Infinity"/>
+                </VBox>
+
+                <VBox fx:id="otherBox" spacing="6.0">
+                    <Label text="Recipient Account Number:" style="-fx-font-weight: bold;"/>
+                    <TextField fx:id="recipientField" promptText="Enter account number"/>
+                </VBox>
+
+                <Label text="Amount (P):" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="amountField" promptText="Enter amount"/>
+            </VBox>
+
+            <Label fx:id="messageLabel" maxWidth="380.0" wrapText="true" alignment="CENTER"/>
+
+            <Button fx:id="confirmButton" text="Confirm Transfer" defaultButton="true"
+                    onAction="#onConfirmClicked" prefWidth="220.0"
+                    style="-fx-background-color: #14407d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+        </VBox>
+    </center>
+</BorderPane>

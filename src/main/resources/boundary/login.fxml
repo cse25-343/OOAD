@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="380.0" prefHeight="560.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f4f8fc, #cfe3f3);"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="boundary.LoginView">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #14407d;">
+            <padding>
+                <Insets top="18" right="25" bottom="18" left="25"/>
+            </padding>
+            <Label text="Seabank" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="14.0">
+            <padding>
+                <Insets top="35" right="35" bottom="20" left="35"/>
+            </padding>
+
+            <Label text="Welcome Back!" style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #14407d;"/>
+            <Label text="Login to your account" style="-fx-font-size: 16px; -fx-text-fill: #14407d;"/>
+
+            <TextField fx:id="accountNumberField" promptText="Account Number" prefHeight="42.0"
+                       style="-fx-background-radius: 8; -fx-border-color: #6fa0e0; -fx-border-radius: 8; -fx-font-size: 14px;"/>
+
+            <PasswordField fx:id="passwordField" promptText="Password" prefHeight="42.0"
+                           style="-fx-background-radius: 8; -fx-border-color: #6fa0e0; -fx-border-radius: 8; -fx-font-size: 14px;"/>
+
+            <Label fx:id="messageLabel" maxWidth="Infinity" wrapText="true" alignment="CENTER"
+                   style="-fx-text-fill: #c0392b;"/>
+
+            <Button fx:id="loginButton" text="Login" defaultButton="true" onAction="#onLoginClicked"
+                    maxWidth="Infinity" prefHeight="46.0"
+                    style="-fx-background-color: #0b5cc7; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-background-radius: 8;"/>
+
+            <HBox alignment="CENTER" spacing="10.0">
+                <Separator HBox.hgrow="ALWAYS"/>
+                <Label text="OR" style="-fx-font-weight: bold;"/>
+                <Separator HBox.hgrow="ALWAYS"/>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="4.0">
+                <Label text="Don't have an account?"/>
+                <Hyperlink fx:id="registerLink" text="Register here" onAction="#onRegisterClicked"
+                           style="-fx-text-fill: #0b5cc7;"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

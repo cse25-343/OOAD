@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="720.0" prefHeight="500.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f4f8fc, #cfe3f3);"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="boundary.WithdrawView">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #14407d;">
+            <padding>
+                <Insets top="12" right="20" bottom="12" left="20"/>
+            </padding>
+            <Label text="Seabank" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="backButton" text="Back to Dashboard" onAction="#onBackClicked"
+                    style="-fx-background-color: #2a62b5; -fx-text-fill: white; -fx-background-radius: 5;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="12.0">
+            <padding>
+                <Insets top="30" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="Withdraw Money" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #14407d;"/>
+            <Label text="Choose an account and enter the amount." style="-fx-font-size: 14px;"/>
+
+            <VBox spacing="5.0" maxWidth="360.0">
+                <padding>
+                    <Insets top="15" right="0" bottom="0" left="0"/>
+                </padding>
+                <Label text="Select Account:" style="-fx-font-weight: bold;"/>
+                <ComboBox fx:id="accountBox" promptText="Choose account" maxWidth="Infinity"/>
+
+                <Label text="Available Balance:" style="-fx-font-weight: bold;">
+                    <padding>
+                        <Insets top="10" right="0" bottom="0" left="0"/>
+                    </padding>
+                </Label>
+                <Label fx:id="balanceLabel" text="P 0.00" style="-fx-font-size: 18px;"/>
+
+                <Label text="Amount (P):" style="-fx-font-weight: bold;">
+                    <padding>
+                        <Insets top="10" right="0" bottom="0" left="0"/>
+                    </padding>
+                </Label>
+                <TextField fx:id="amountField" promptText="Enter amount"/>
+            </VBox>
+
+            <Label fx:id="messageLabel" maxWidth="360.0" wrapText="true" alignment="CENTER"/>
+
+            <Button fx:id="confirmButton" text="Confirm Withdrawal" defaultButton="true"
+                    onAction="#onConfirmClicked" prefWidth="220.0"
+                    style="-fx-background-color: #14407d; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+        </VBox>
+    </center>
+</BorderPane>
