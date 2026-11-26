@@ -1,20 +1,20 @@
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\BankData.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\DashboardController.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\DepositView.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\HistoryView.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\LoginView.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\Main.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\RegisterView.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\TransferView.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\boundary\WithdrawView.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\database\DatabaseManager.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\Account.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\ChequeAccount.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\Company.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\Customer.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\InterestCalculable.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\InvestmentAccount.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\Person.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\SavingsAccount.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\model\Transaction.java
-C:\Users\school acc\OneDrive - Botswana Accountancy College (1)\Documents\SeaBank\src\main\java\service\BankingService.java
+/workspaces/OOAD/src/main/java/boundary/BankData.java
+/workspaces/OOAD/src/main/java/boundary/DashboardController.java
+/workspaces/OOAD/src/main/java/boundary/DepositView.java
+/workspaces/OOAD/src/main/java/boundary/HistoryView.java
+/workspaces/OOAD/src/main/java/boundary/LoginView.java
+/workspaces/OOAD/src/main/java/boundary/Main.java
+/workspaces/OOAD/src/main/java/boundary/RegisterView.java
+/workspaces/OOAD/src/main/java/boundary/TransferView.java
+/workspaces/OOAD/src/main/java/boundary/WithdrawView.java
+/workspaces/OOAD/src/main/java/database/DatabaseManager.java
+/workspaces/OOAD/src/main/java/model/Account.java
+/workspaces/OOAD/src/main/java/model/ChequeAccount.java
+/workspaces/OOAD/src/main/java/model/Company.java
+/workspaces/OOAD/src/main/java/model/Customer.java
+/workspaces/OOAD/src/main/java/model/InterestCalculable.java
+/workspaces/OOAD/src/main/java/model/InvestmentAccount.java
+/workspaces/OOAD/src/main/java/model/Person.java
+/workspaces/OOAD/src/main/java/model/SavingsAccount.java
+/workspaces/OOAD/src/main/java/model/Transaction.java
+/workspaces/OOAD/src/main/java/service/BankingService.java
